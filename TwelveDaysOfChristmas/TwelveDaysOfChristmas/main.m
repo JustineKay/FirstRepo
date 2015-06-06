@@ -26,15 +26,15 @@ int main(int argc, const char * argv[]) {
         
         
         
-        // SECOND ATTEMPT with ARRAYS...  I tried "arraysWithObjects" even though I didn't know what it would do. It didn't work.  Oops.
+     //   SECOND ATTEMPT with ARRAYS...  I tried "arraysWithObjects" even though I didn't know what it would do. It didn't work.  Oops.
         
-        //        NSArray *twelveGifts = [NSArray arrayWithObjects:@"a Partridge in a Pear Tree", @"Two Turtle Doves", @"Three French Hens", @"Four Calling Birds", @"Five Geese a-Laying", @"Eight Maids a-Milking", @"Nine Ladies Dancing", @"Ten Lords a-Leaping", @"Eleven Pipers Piping", @"Twelve Drummers Drumming", nil];
-        //
-        //        NSArray *twelveDays = [NSArray arrayWithObjects:@"first", @"second", @"third", @"fourth", @"fifth", @"sixth", @"seventh", @"eighth", @"ninth", @"tenth", @"eleventh", @"twelveth", nil];
-        //
-        //        NSArray *repeatingVerse = [NSArray arrayWithObjects:@"On the", @"day of Christmas my true love gave to me", nil];
-        //
-        //        NSLog(@"%@ %@ %@ %@.", repeatingVerse [0], twelveDays[0], repeatingVerse [1], twelveGifts[0]);
+                NSArray *twelveGifts = @[@"a Partridge in a Pear Tree", @"Two Turtle Doves", @"Three French Hens", @"Four Calling Birds", @"Five Geese a-Laying", @"Eight Maids a-Milking", @"Nine Ladies Dancing", @"Ten Lords a-Leaping", @"Eleven Pipers Piping", @"Twelve Drummers Drumming"];
+        
+               NSArray *twelveDays = @[@"first", @"second", @"third", @"fourth", @"fifth", @"sixth", @"seventh", @"eighth", @"ninth", @"tenth", @"eleventh", @"twelfth"];
+        
+                NSArray *repeatingVerse = @[@"On the %@", twelveDays[0], @"day of Christmas my true love gave to me %@"];
+        
+                NSLog(@"%@ %@ %@ %@.", repeatingVerse [0], twelveDays[0], repeatingVerse [1], twelveGifts[0]);
         
         
         
@@ -91,25 +91,25 @@ int main(int argc, const char * argv[]) {
         
         //FOURTH ATTEMPT back at ARRAYS... After I took a peek at Christella's code I was able to fix up my original idea to work with arrays. It works.  Thanks Christella!
         
-        NSArray *repeatingVerse = @[@"On the", @"day of Christmas my true love gave to me"];
+       // NSArray *repeatingVerse = @[@"On the", @"day of Christmas my true love gave to me"];
         
-        NSArray *twelveGifts = @[@"a Partridge in a Pear Tree", @"Two Turtle Doves", @"Three French Hens", @"Four Calling Birds", @"Five Golden Rings", @"Six Geese a-Laying",@"Seven Swans a-Swimming", @"Eight Maids a-Milking", @"Nine Ladies Dancing", @"Ten Lords a-Leaping", @"Eleven Pipers Piping", @"Twelve Drummers Drumming"];
+      //  NSArray *twelveGifts = @[@"a Partridge in a Pear Tree", @"Two Turtle Doves", @"Three French Hens", @"Four Calling Birds", @"Five Golden Rings", @"Six Geese a-Laying",@"Seven Swans a-Swimming", @"Eight Maids a-Milking", @"Nine Ladies Dancing", @"Ten Lords a-Leaping", @"Eleven Pipers Piping", @"Twelve Drummers Drumming"];
         
-        NSArray *twelveDays = @[@"first", @"second", @"third", @"fourth", @"fifth", @"sixth", @"seventh", @"eighth", @"ninth", @"tenth", @"eleventh", @"twelveth"];
+      //  NSArray *twelveDays = @[@"first", @"second", @"third", @"fourth", @"fifth", @"sixth", @"seventh", @"eighth", @"ninth", @"tenth", @"eleventh", @"twelveth"];
         
         //Verses
-        NSLog(@"\n%@ %@ %@\n%@.", repeatingVerse [0], twelveDays[0], repeatingVerse [1], twelveGifts[0]);
-        NSLog(@"\n%@ %@ %@\n%@\nand %@.", repeatingVerse [0], twelveDays[1], repeatingVerse [1], twelveGifts[1], twelveGifts[0]);
-        NSLog(@"\n%@ %@ %@\n%@\n%@\nand %@.", repeatingVerse [0], twelveDays[2], repeatingVerse [1], twelveGifts[2], twelveGifts[1], twelveGifts[0]);
-        NSLog(@"\n%@ %@ %@\n%@\n%@\n%@\nand %@.", repeatingVerse [0], twelveDays[3], repeatingVerse [1], twelveGifts[3], twelveGifts[2], twelveGifts[1], twelveGifts[0]);
-        NSLog(@"\n%@ %@ %@\n%@\n%@\n%@\n%@\nand %@.", repeatingVerse [0], twelveDays[4], repeatingVerse [1], twelveGifts[4], twelveGifts[3], twelveGifts[2], twelveGifts[1], twelveGifts[0]);
-        NSLog(@"\n%@ %@ %@\n%@\n%@\n%@\n%@\n%@\nand %@.", repeatingVerse [0], twelveDays[5], repeatingVerse [1], twelveGifts[5], twelveGifts[4], twelveGifts[3], twelveGifts[2], twelveGifts[1], twelveGifts[0]);
-        NSLog(@"\n%@ %@ %@\n%@\n%@\n%@\n%@\n%@\n%@\nand %@.", repeatingVerse [0], twelveDays[6], repeatingVerse [1], twelveGifts[6], twelveGifts[5], twelveGifts[4], twelveGifts[3], twelveGifts[2], twelveGifts[1], twelveGifts[0]);
-        NSLog(@"\n%@ %@ %@\n%@\n%@\n%@\n%@\n%@\n%@\n%@\nand %@.", repeatingVerse [0], twelveDays[7], repeatingVerse [1], twelveGifts[7], twelveGifts[6], twelveGifts[5], twelveGifts[4], twelveGifts[3], twelveGifts[2], twelveGifts[1], twelveGifts[0]);
-        NSLog(@"\n%@ %@ %@\n%@\n%@\n%@\n%@\n%@\n%@\n%@\n%@\nand %@.", repeatingVerse [0], twelveDays[8], repeatingVerse [1], twelveGifts[8], twelveGifts[7], twelveGifts[6], twelveGifts[5], twelveGifts[4], twelveGifts[3], twelveGifts[2], twelveGifts[1], twelveGifts[0]);
-        NSLog(@"\n%@ %@ %@\n%@\n%@\n%@\n%@\n%@\n%@\n%@\n%@\n%@\nand %@.", repeatingVerse [0], twelveDays[9], repeatingVerse [1], twelveGifts[9], twelveGifts[8], twelveGifts[7], twelveGifts[6], twelveGifts[5], twelveGifts[4], twelveGifts[3], twelveGifts[2], twelveGifts[1], twelveGifts[0]);
-        NSLog(@"\n%@ %@ %@\n%@\n%@\n%@\n%@\n%@\n%@\n%@\n%@\n%@\n%@\nand %@.", repeatingVerse [0], twelveDays[10], repeatingVerse [1], twelveGifts[10], twelveGifts[9], twelveGifts[8], twelveGifts[7], twelveGifts[6], twelveGifts[5], twelveGifts[4], twelveGifts[3], twelveGifts[2], twelveGifts[1], twelveGifts[0]);
-        NSLog(@"\n%@ %@ %@\n%@\n%@\n%@\n%@\n%@\n%@\n%@\n%@\n%@\n%@\n%@\nand %@.", repeatingVerse [0], twelveDays[11], repeatingVerse [1],twelveGifts[11], twelveGifts[10], twelveGifts[9], twelveGifts[8], twelveGifts[7], twelveGifts[6], twelveGifts[5], twelveGifts[4], twelveGifts[3], twelveGifts[2], twelveGifts[1], twelveGifts[0]);
+     //   NSLog(@"\n%@ %@ %@\n%@.", repeatingVerse [0], twelveDays[0], repeatingVerse [1], twelveGifts[0]);
+      //  NSLog(@"\n%@ %@ %@\n%@\nand %@.", repeatingVerse [0], twelveDays[1], repeatingVerse [1], twelveGifts[1], twelveGifts[0]);
+       // NSLog(@"\n%@ %@ %@\n%@\n%@\nand %@.", repeatingVerse [0], twelveDays[2], repeatingVerse [1], twelveGifts[2], twelveGifts[1], twelveGifts[0]);
+       // NSLog(@"\n%@ %@ %@\n%@\n%@\n%@\nand %@.", repeatingVerse [0], twelveDays[3], repeatingVerse [1], twelveGifts[3], twelveGifts[2], twelveGifts[1], twelveGifts[0]);
+       // NSLog(@"\n%@ %@ %@\n%@\n%@\n%@\n%@\nand %@.", repeatingVerse [0], twelveDays[4], repeatingVerse [1], twelveGifts[4], twelveGifts[3], twelveGifts[2], twelveGifts[1], twelveGifts[0]);
+       // NSLog(@"\n%@ %@ %@\n%@\n%@\n%@\n%@\n%@\nand %@.", repeatingVerse [0], twelveDays[5], repeatingVerse [1], twelveGifts[5], twelveGifts[4], twelveGifts[3], twelveGifts[2], twelveGifts[1], twelveGifts[0]);
+       // NSLog(@"\n%@ %@ %@\n%@\n%@\n%@\n%@\n%@\n%@\nand %@.", repeatingVerse [0], twelveDays[6], repeatingVerse [1], twelveGifts[6], twelveGifts[5], twelveGifts[4], twelveGifts[3], twelveGifts[2], twelveGifts[1], twelveGifts[0]);
+       // NSLog(@"\n%@ %@ %@\n%@\n%@\n%@\n%@\n%@\n%@\n%@\nand %@.", repeatingVerse [0], twelveDays[7], repeatingVerse [1], twelveGifts[7], twelveGifts[6], twelveGifts[5], twelveGifts[4], twelveGifts[3], twelveGifts[2], twelveGifts[1], twelveGifts[0]);
+       // NSLog(@"\n%@ %@ %@\n%@\n%@\n%@\n%@\n%@\n%@\n%@\n%@\nand %@.", repeatingVerse [0], twelveDays[8], repeatingVerse [1], twelveGifts[8], twelveGifts[7], twelveGifts[6], twelveGifts[5], twelveGifts[4], twelveGifts[3], twelveGifts[2], twelveGifts[1], twelveGifts[0]);
+       // NSLog(@"\n%@ %@ %@\n%@\n%@\n%@\n%@\n%@\n%@\n%@\n%@\n%@\nand %@.", repeatingVerse [0], twelveDays[9], repeatingVerse [1], twelveGifts[9], twelveGifts[8], twelveGifts[7], twelveGifts[6], twelveGifts[5], twelveGifts[4], twelveGifts[3], twelveGifts[2], twelveGifts[1], twelveGifts[0]);
+       // NSLog(@"\n%@ %@ %@\n%@\n%@\n%@\n%@\n%@\n%@\n%@\n%@\n%@\n%@\nand %@.", repeatingVerse [0], twelveDays[10], repeatingVerse [1], twelveGifts[10], twelveGifts[9], twelveGifts[8], twelveGifts[7], twelveGifts[6], twelveGifts[5], twelveGifts[4], twelveGifts[3], twelveGifts[2], twelveGifts[1], twelveGifts[0]);
+      //  NSLog(@"\n%@ %@ %@\n%@\n%@\n%@\n%@\n%@\n%@\n%@\n%@\n%@\n%@\n%@\nand %@.", repeatingVerse [0], twelveDays[11], repeatingVerse [1],twelveGifts[11], twelveGifts[10], twelveGifts[9], twelveGifts[8], twelveGifts[7], twelveGifts[6], twelveGifts[5], twelveGifts[4], twelveGifts[3], twelveGifts[2], twelveGifts[1], twelveGifts[0]);
         
         //SO looking forward to learning about loops...
 
