@@ -41,8 +41,9 @@ int main(int argc, const char * argv[]) {
         NSString *firstCountryVisited = @[@"| 1 |                        %@ |    %@ |", yearVisited[0], countries[0]];
         
         NSString *result = [
-        
-        
+        //amazingggg
+        NSLog vbvb
+                            
         NSLog()
         
 
