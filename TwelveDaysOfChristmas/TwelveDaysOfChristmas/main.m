@@ -28,13 +28,16 @@ int main(int argc, const char * argv[]) {
         
      //   SECOND ATTEMPT with ARRAYS...  I tried "arraysWithObjects" even though I didn't know what it would do. It didn't work.  Oops.
         
-                NSArray *twelveGifts = @[@"a Partridge in a Pear Tree", @"Two Turtle Doves", @"Three French Hens", @"Four Calling Birds", @"Five Geese a-Laying", @"Eight Maids a-Milking", @"Nine Ladies Dancing", @"Ten Lords a-Leaping", @"Eleven Pipers Piping", @"Twelve Drummers Drumming"];
+            NSArray *twelveDays = @[@"first", @"second", @"third", @"fourth", @"fifth", @"sixth", @"seventh", @"eighth", @"ninth", @"tenth", @"eleventh", @"twelfth"];
         
-               NSArray *twelveDays = @[@"first", @"second", @"third", @"fourth", @"fifth", @"sixth", @"seventh", @"eighth", @"ninth", @"tenth", @"eleventh", @"twelfth"];
+            NSArray *twelveGifts = @[@"a Partridge in a Pear Tree", @"Two Turtle Doves", @"Three French Hens", @"Four Calling Birds", @"Five Geese a-Laying", @"Eight Maids a-Milking", @"Nine Ladies Dancing", @"Ten Lords a-Leaping", @"Eleven Pipers Piping", @"Twelve Drummers Drumming", @"and a Partridge in a Pear Tree"];
         
-                NSArray *repeatingVerse = @[@"On the %@", twelveDays[0], @"day of Christmas my true love gave to me %@"];
+        NSArray *repeatingVerse = @[@"On the", @"day of Christmas my true love sent to me",twelveDays[0], twelveGifts[0]];
         
-                NSLog(@"%@ %@ %@ %@.", repeatingVerse [0], twelveDays[0], repeatingVerse [1], twelveGifts[0]);
+            NSLog(@"%@ %@ %@ %@.", repeatingVerse [0], twelveDays[0], repeatingVerse [1], twelveGifts[0]);
+            NSLog(@"%@ %@ %@ %@ %@.", repeatingVerse [0], twelveDays[1], repeatingVerse [1], twelveGifts[1], twelveGifts[10]);
+        
+        
         
         
         
